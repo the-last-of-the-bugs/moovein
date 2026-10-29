@@ -142,12 +142,12 @@ function Docs() {
           <div className="mt-8">
             <Section id="install" title="Installation">
               <p>Moovein ships as ESM with TypeScript declarations. No peer dependencies.</p>
-              <CodeBlock code={`npm install moovein\n# or\npnpm add moovein`} filename="terminal" />
+              <CodeBlock code={`npm install @tlob/moovein\n# or\npnpm add @tlob/moovein`} filename="terminal" />
               <p>
                 Framework adapters live in their own packages so the core never pulls React, Vue or
                 Svelte into your bundle.
               </p>
-              <CodeBlock code={`pnpm add @moovein/react   # or @moovein/vue, @moovein/svelte`} filename="terminal" />
+              <CodeBlock code={`pnpm add @tlob/moovein-react   # or @tlob/moovein-vue, @tlob/moovein-svelte`} filename="terminal" />
             </Section>
 
             <Section id="quick-start" title="Quick start">
@@ -274,7 +274,7 @@ stop();`}
               </p>
               <CodeBlock
                 filename="Card.tsx"
-                code={`import { useMoovein } from "@moovein/react";
+                code={`import { useMoovein } from "@tlob/moovein-react";
 
 export function Card() {
   const { ref, controls } = useMoovein({ y: [40, 0], opacity: [0, 1] }, {
